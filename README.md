@@ -17,9 +17,7 @@ Web nghe nhạc Nhóm 11
       -  Click thanh progress tua nhạc
       -  Click và kéo On / Off Volume
       -  Đăng nhâp , Đăng ký 
-
-![Uploading image.png…]()
-< img src="https://upanh.tv/image/y8VOnM" alt="sodochucnang" width=250 height=250/>
+      https://upanh.tv/image/y8VOnM
 
 
 
