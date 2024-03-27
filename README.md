@@ -23,7 +23,7 @@ Web nghe nhạc Nhóm 11
 
 ## demo:
 
-   <img  width="auto" src='./public/sodochucnang.png'>
+   ![sodochucnang](https://upanh.tv/image/y8VOnM)
 
 
 
