@@ -18,5 +18,9 @@ Web nghe nhạc Nhóm 11
       -  Click và kéo On / Off Volume
       -  Đăng nhâp , Đăng ký 
 
+![Uploading image.png…]()
+
+
+
 
 
