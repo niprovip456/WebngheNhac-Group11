@@ -10,7 +10,12 @@ import {
 
 const store = configureStore({
     reducer: {
-        
+        feature: featureSlice.reducer,
+        status: statusSlice.reducer,
+        sidebar: sidebarSlice.reducer,
+        theme: themeSlice.reducer,
+        login: loginSlice.reducer,
+        radio: radioSlice.reducer,
     },
 });
 export default store;
