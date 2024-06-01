@@ -46,20 +46,20 @@ npm start
 ---
 ![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/6a2fcca0-484c-4b38-aa7a-345d8787b638)
 
--   UX/UI đẹp
 ---
+-   UX/UI đẹp
 ![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/70119fc7-4105-4ee5-8a4b-3cc0d936d77c)
 
--   Deploy Web
 ---
+-   Deploy Web
 ![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/feb8a775-a29a-4050-8c86-3d3dbd004a56)
 
+---
 -   SEO Score > 90
----
-![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/7a1d3dcc-9417-492e-8e6e-ae89685b0666)
+![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/9fb9acda-463d-40ba-832a-d44b8fdf3b88)
 
--   Có tính năng nâng cao Search Auto Complete
 ---
+-   Có tính năng nâng cao Search Auto Complete
 ![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/e46d7ccc-f8ff-47a6-9d6c-7bbbe474c2f4)
 
 
