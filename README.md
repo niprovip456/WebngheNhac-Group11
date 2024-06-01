@@ -41,26 +41,31 @@ npm start
 
 <br />
 
-## Các tiêu chí cộng điểm
--   Video Seminar
+## Các tiêu chí cộng điểm'
 ---
+-   Video Seminar
+
 ![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/6a2fcca0-484c-4b38-aa7a-345d8787b638)
 
 ---
 -   UX/UI đẹp
+
 ![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/70119fc7-4105-4ee5-8a4b-3cc0d936d77c)
 
 ---
 -   Deploy Web
+
 ![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/feb8a775-a29a-4050-8c86-3d3dbd004a56)
 
 ---
 -   SEO Score > 90
-![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/9fb9acda-463d-40ba-832a-d44b8fdf3b88)
+
+![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/b61cecbf-2dc0-42c7-88fd-5581bd518c3e)
 
 ---
 -   Có tính năng nâng cao Search Auto Complete
-![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/e46d7ccc-f8ff-47a6-9d6c-7bbbe474c2f4)
+![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/622c9408-8421-4704-af48-b563249e7b05)
+
 
 
 
