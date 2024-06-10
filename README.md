@@ -69,18 +69,125 @@ npm start
 ---
 # Seminar: Ruby on Rails 
 ***1. Ruby hỗ trợ quản lý CSDL như thế nào?***
-- Ruby on Rails hỗ trợ quản lý cơ sở dữ liệu toàn diện thông qua một framework ánh xạ quan hệ đối tượng (ORM) tên là ActiveRecord. ActiveRecord đóng vai trò như cầu nối giữa các đối tượng Ruby và bảng dữ liệu, giúp đơn giản hóa việc truy cập và thao tác dữ liệu.
-- Các tính năng chính của ActiveRecord trong quản lý cơ sở dữ liệu trên Rails:
-  - Model - View - Controller (MVC): Rails tuân theo mô hình MVC, trong đó ActiveRecord đóng vai trò quan trọng ở lớp Model. Nó ánh xạ các bảng cơ sở dữ liệu thành các lớp Ruby, được gọi là model, đại diện cho các thực thể dữ liệu của ứng dụng.
-  - Quản lý lược đồ cơ sở dữ liệu tự động: ActiveRecord tự động tạo các migration (di chuyển) lược đồ cơ sở dữ liệu dựa trên các model được định nghĩa. Điều này giúp đơn giản hóa việc tạo và sửa đổi lược đồ cơ sở dữ liệu.
-  - Truy cập và thao tác dữ liệu: ActiveRecord cung cấp các phương thức để tạo, đọc, cập nhật và xóa (CRUD) dữ liệu trong cơ sở dữ liệu. Các phương thức này trực quan và dễ sử dụng, giúp giảm thiểu nhu cầu viết các truy vấn SQL trực tiếp.
-  - Các mối quan hệ và liên kết: ActiveRecord xử lý các mối quan hệ giữa các model, chẳng hạn như quan hệ một-đối-một, một-đối-nhiều và nhiều-đối-nhiều. Nó giúp đơn giản hóa việc quản lý các cấu trúc dữ liệu phức tạp.
-  - Xác thực dữ liệu: ActiveRecord cung cấp các tính năng xác thực tích hợp để đảm bảo tính toàn vẹn của dữ liệu. Nó cho phép định nghĩa các quy tắc xác thực cho từng thuộc tính của model, ngăn chặn dữ liệu không hợp lệ đi vào cơ sở dữ liệu.
-  - Trừu tượng hóa cơ sở dữ liệu: ActiveRecord trừu tượng hóa công nghệ cơ sở dữ liệu nền tảng, cho phép làm việc với các hệ thống cơ sở dữ liệu khác nhau mà không cần thay đổi nhiều code.
-  - Lưu trữ tạm dữ liệu: ActiveRecord hỗ trợ các cơ chế lưu trữ tạm dữ liệu để cải thiện hiệu suất và giảm tải cho cơ sở dữ liệu. Nó có thể lưu trữ tạm dữ liệu được truy cập thường xuyên trong bộ nhớ, giảm thiểu các lượt truy cập qua lại với cơ sở dữ liệu.
-  - Bảo mật: ActiveRecord tích hợp với các tính năng bảo mật của Rails để bảo vệ dữ liệu khỏi truy cập trái phép và thao tác. Nó giúp ngăn chặn các cuộc tấn công SQL injection và các lỗ hổng bảo mật liên quan đến cơ sở dữ liệu khác.
+- Ruby hỗ trợ quản lý cơ sở dữ liệu (CSDL) thông qua nhiều thư viện và công cụ, nhưng nổi bật nhất là Active Record, một phần của framework Ruby on Rails. Dưới đây là cách Ruby, đặc biệt là Ruby on Rails, hỗ trợ quản lý CSDL:
+**1. Active**
+- Active Record là một ORM (Object-Relational Mapping) được tích hợp sẵn trong Ruby on Rails. Nó cung cấp một cách tiếp cận thân thiện với lập trình viên để làm việc với cơ sở dữ liệu. Một số tính năng và lợi ích chính có thể kể đến của Active Record như:
+  - Mapping Objects to Tables: Active Record tự động ánh xạ các lớp Ruby vào các bảng trong cơ sở dữ liệu. Ví dụ, một lớp User trong Ruby sẽ tương ứng với bảng users trong CSDL.
+  - CRUD Operations: Active Record cung cấp các phương thức để thực hiện các thao tác CRUD (Create, Read, Update, Delete) một cách dễ dàng. Ví dụ:
+```sh
+user = User.new(name: "Luong", email: "luonq@example.com")
+user.save  # Create
 
+user = User.find(1)  # Read
+user.update(email: "newemail@example.com")  # Update
+user.destroy  # Delete
+```
+  - Validations: Active Record hỗ trợ các xác thực dữ liệu dễ dàng để đảm bảo tính nhất quán và hợp lệ của dữ liệu.
+```sh
+class User < ApplicationRecord
+  validates :name, presence: true
+  validates :email, uniqueness: true
+end
+```
+  - Associations: Active Record cung cấp các phương thức để thiết lập mối quan hệ giữa các bảng như belongs_to, has_many, has_one, has_and_belongs_to_many.
+```sh
+class User < ApplicationRecord
+  has_many :posts
+end
+
+class Post < ApplicationRecord
+  belongs_to :user
+end
+```
+**2. Migrations**
+- Migrations trong Rails cho phép quản lý các thay đổi trong cấu trúc cơ sở dữ liệu theo thời gian. Chúng cung cấp một cách để phiên bản hóa và áp dụng các thay đổi đối với CSDL.
+
+  - Tạo Migrations: Tạo một migration bằng lệnh:
+```sh
+rails generate migration AddEmailToUsers email:string
+```
+  - Chạy Migrations: Để áp dụng các thay đổi trong migration, chạy:
+```sh
+rails db:migrate
+```
+  - Rollback Migrations: Quay lại migration trước đó nếu cần:
+```sh
+rails db:rollback
+```
+**3. Query Interface**
+- Active Record cung cấp một query interface mạnh mẽ, cho phép truy vấn CSDL một cách dễ dàng và trực quan.
+
+  - Basic Queries:
+```sh
+users = User.where(active: true)
+user = User.find_by(email: "luong@example.com")
+```
+  - Advanced Queries:
+```sh
+users = User.joins(:posts).where("posts.created_at > ?", 1.week.ago)
+```
+  - Scopes: Định nghĩa các scopes để tái sử dụng các truy vấn phức tạp.
+```sh
+class User < ApplicationRecord
+  scope :active, -> { where(active: true) }
+  scope :recent, -> { order(created_at: :desc) }
+end
+```
+**4. Database Configuration**
+- Rails cung cấp một tệp cấu hình (config/database.yml) để thiết lập kết nối với nhiều loại CSDL như SQLite, MySQL, PostgreSQL, và nhiều loại khác.
+```sh
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: myapp_development
+
+test:
+  <<: *default
+  database: myapp_test
+
+production:
+  <<: *default
+  database: myapp_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+```
+**5. Database Tasks**
+- Rails cung cấp nhiều tác vụ (tasks) để quản lý cơ sở dữ liệu dễ dàng thông qua dòng lệnh:
+
+  - Setup Database:
+```sh
+rails db:setup
+```
+  - Create Database:
+```sh
+rails db:create
+```
+  - Drop Database:
+```sh
+rails db:drop
+```
+  - Migrate Database:
+```sh
+rails db:migrate
+```
+  - Seed Database:
+```sh
+rails db:seed
+```
 ***2. Tại sao phải sử dụng  Ruby on Rails so với các ngôn ngữ lập trình khác?***
+- Có nhiều lý do tại sao lập trình viên lại chọn sử dụng Ruby on Rails thay vì các ngôn ngữ lập trình khác, đó là vì:
+
+  - Tính đơn giản và hiệu quả: Ruby on Rails được thiết kế với triết lý "Convention over Configuration", giúp lập trình viên tập trung vào việc xây dựng các tính năng hay quy  thay vì phải đối mặt với các cấu hình phức tạp. Điều này giúp tăng tốc độ phát triển và giảm thời gian lập trình.
+  - Cộng đồng mạnh mẽ: Ruby on Rails có một cộng đồng lập trình viên rất lớn và sôi nổi, cung cấp rất nhiều tài nguyên, hướng dẫn và thư viện mã nguồn mở có sẵn.
+  - Tính linh hoạt và mở rộng: Rails cung cấp một cấu trúc module hóa mạnh mẽ, cho phép lập trình viên dễ dàng thêm, sửa đổi và mở rộng các tính năng của ứng dụng.
+  - Hiệu suất cao: Với bộ công cụ và framework mạnh mẽ, Rails có thể giúp lập trình viên xây dựng các ứng dụng web với hiệu suất cao, đặc biệt là đối với các dự án có yêu cầu phức tạp.
+  - Hỗ trợ tốt cho các yêu cầu phổ biến: Rails cung cấp sẵn các tính năng phổ biến như quản lý phiên, bảo mật, xác thực, cơ sở dữ liệu, v.v. giúp lập trình viên tập trung vào các tính năng chính của ứng dụng.
+  - Tích hợp với nhiều công nghệ khác: Rails có thể dễ dàng tích hợp với các công nghệ như JavaScript, HTML, CSS, và nhiều công nghệ khác để xây dựng các ứng dụng web đầy đủ tính năng.
+  - Phù hợp với mô hình MVC: Rails tuân theo mô hình Model-View-Controller (MVC), giúp tổ chức và quản lý code một cách rõ ràng, dễ bảo trì và mở rộng.
    
 
 
