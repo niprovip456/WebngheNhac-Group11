@@ -82,15 +82,14 @@ user = User.find(1)  # Read
 user.update(email: "newemail@example.com")  # Update
 user.destroy  # Delete
 ```
-  - Validations: Active Record hỗ trợ các xác thực dữ liệu dễ dàng để đảm bảo tính nhất quán và hợp lệ của dữ liệu.
+    - Validations: Active Record hỗ trợ các xác thực dữ liệu dễ dàng để đảm bảo tính nhất quán và hợp lệ của dữ liệu.
 ```sh
 class User < ApplicationRecord
   validates :name, presence: true
   validates :email, uniqueness: true
 end
 ```
-- 
-  - Associations: Active Record cung cấp các phương thức để thiết lập mối quan hệ giữa các bảng như belongs_to, has_many, has_one, has_and_belongs_to_many.
+    - Associations: Active Record cung cấp các phương thức để thiết lập mối quan hệ giữa các bảng như belongs_to, has_many, has_one, has_and_belongs_to_many.
 ```sh
 class User < ApplicationRecord
   has_many :posts
