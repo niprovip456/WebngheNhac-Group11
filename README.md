@@ -82,6 +82,7 @@ user = User.find(1)  # Read
 user.update(email: "newemail@example.com")  # Update
 user.destroy  # Delete
 ```
+- 
   - Validations: Active Record hỗ trợ các xác thực dữ liệu dễ dàng để đảm bảo tính nhất quán và hợp lệ của dữ liệu.
 ```sh
 class User < ApplicationRecord
@@ -89,6 +90,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
 end
 ```
+- 
   - Associations: Active Record cung cấp các phương thức để thiết lập mối quan hệ giữa các bảng như belongs_to, has_many, has_one, has_and_belongs_to_many.
 ```sh
 class User < ApplicationRecord
@@ -100,32 +102,36 @@ class Post < ApplicationRecord
 end
 ```
 - **2. Migrations**
-- Migrations trong Rails cho phép quản lý các thay đổi trong cấu trúc cơ sở dữ liệu theo thời gian. Chúng cung cấp một cách để phiên bản hóa và áp dụng các thay đổi đối với CSDL.
-
+  - Migrations trong Rails cho phép quản lý các thay đổi trong cấu trúc cơ sở dữ liệu theo thời gian. Chúng cung cấp một cách để phiên bản hóa và áp dụng các thay đổi đối với CSDL.
+-
   - Tạo Migrations: Tạo một migration bằng lệnh:
 ```sh
 rails generate migration AddEmailToUsers email:string
 ```
+-
   - Chạy Migrations: Để áp dụng các thay đổi trong migration, chạy:
 ```sh
 rails db:migrate
 ```
+-
   - Rollback Migrations: Quay lại migration trước đó nếu cần:
 ```sh
 rails db:rollback
 ```
 - **3. Query Interface**
-- Active Record cung cấp một query interface mạnh mẽ, cho phép truy vấn CSDL một cách dễ dàng và trực quan.
-
+  - Active Record cung cấp một query interface mạnh mẽ, cho phép truy vấn CSDL một cách dễ dàng và trực quan.
+-
   - Basic Queries:
 ```sh
 users = User.where(active: true)
 user = User.find_by(email: "luong@example.com")
 ```
+-
   - Advanced Queries:
 ```sh
 users = User.joins(:posts).where("posts.created_at > ?", 1.week.ago)
 ```
+-
   - Scopes: Định nghĩa các scopes để tái sử dụng các truy vấn phức tạp.
 ```sh
 class User < ApplicationRecord
@@ -134,7 +140,7 @@ class User < ApplicationRecord
 end
 ```
 - **4. Database Configuration**
-- Rails cung cấp một tệp cấu hình (config/database.yml) để thiết lập kết nối với nhiều loại CSDL như SQLite, MySQL, PostgreSQL, và nhiều loại khác.
+  - Rails cung cấp một tệp cấu hình (config/database.yml) để thiết lập kết nối với nhiều loại CSDL như SQLite, MySQL, PostgreSQL, và nhiều loại khác.
 ```sh
 default: &default
   adapter: postgresql
@@ -156,24 +162,28 @@ production:
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
 ```
 - **5. Database Tasks**
-- Rails cung cấp nhiều tác vụ (tasks) để quản lý cơ sở dữ liệu dễ dàng thông qua dòng lệnh:
-
+  - Rails cung cấp nhiều tác vụ (tasks) để quản lý cơ sở dữ liệu dễ dàng thông qua dòng lệnh:
+-
   - Setup Database:
 ```sh
 rails db:setup
 ```
+-
   - Create Database:
 ```sh
 rails db:create
 ```
+-
   - Drop Database:
 ```sh
 rails db:drop
 ```
+-
   - Migrate Database:
 ```sh
 rails db:migrate
 ```
+-
   - Seed Database:
 ```sh
 rails db:seed
