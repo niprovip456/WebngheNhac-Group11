@@ -66,6 +66,22 @@ npm start
 -   Có tính năng nâng cao Search Auto Complete
 ![image](https://github.com/niprovip456/WebngheNhac-Group11/assets/129501122/622c9408-8421-4704-af48-b563249e7b05)
 
+---
+# Seminar: Ruby on Rails 
+***1. Ruby hỗ trợ quản lý CSDL như thế nào?***
+- Ruby on Rails hỗ trợ quản lý cơ sở dữ liệu toàn diện thông qua một framework ánh xạ quan hệ đối tượng (ORM) tên là ActiveRecord. ActiveRecord đóng vai trò như cầu nối giữa các đối tượng Ruby và bảng dữ liệu, giúp đơn giản hóa việc truy cập và thao tác dữ liệu.
+- Các tính năng chính của ActiveRecord trong quản lý cơ sở dữ liệu trên Rails:
+  - Model - View - Controller (MVC): Rails tuân theo mô hình MVC, trong đó ActiveRecord đóng vai trò quan trọng ở lớp Model. Nó ánh xạ các bảng cơ sở dữ liệu thành các lớp Ruby, được gọi là model, đại diện cho các thực thể dữ liệu của ứng dụng.
+  - Quản lý lược đồ cơ sở dữ liệu tự động: ActiveRecord tự động tạo các migration (di chuyển) lược đồ cơ sở dữ liệu dựa trên các model được định nghĩa. Điều này giúp đơn giản hóa việc tạo và sửa đổi lược đồ cơ sở dữ liệu.
+  - Truy cập và thao tác dữ liệu: ActiveRecord cung cấp các phương thức để tạo, đọc, cập nhật và xóa (CRUD) dữ liệu trong cơ sở dữ liệu. Các phương thức này trực quan và dễ sử dụng, giúp giảm thiểu nhu cầu viết các truy vấn SQL trực tiếp.
+  - Các mối quan hệ và liên kết: ActiveRecord xử lý các mối quan hệ giữa các model, chẳng hạn như quan hệ một-đối-một, một-đối-nhiều và nhiều-đối-nhiều. Nó giúp đơn giản hóa việc quản lý các cấu trúc dữ liệu phức tạp.
+  - Xác thực dữ liệu: ActiveRecord cung cấp các tính năng xác thực tích hợp để đảm bảo tính toàn vẹn của dữ liệu. Nó cho phép định nghĩa các quy tắc xác thực cho từng thuộc tính của model, ngăn chặn dữ liệu không hợp lệ đi vào cơ sở dữ liệu.
+  - Trừu tượng hóa cơ sở dữ liệu: ActiveRecord trừu tượng hóa công nghệ cơ sở dữ liệu nền tảng, cho phép làm việc với các hệ thống cơ sở dữ liệu khác nhau mà không cần thay đổi nhiều code.
+  - Lưu trữ tạm dữ liệu: ActiveRecord hỗ trợ các cơ chế lưu trữ tạm dữ liệu để cải thiện hiệu suất và giảm tải cho cơ sở dữ liệu. Nó có thể lưu trữ tạm dữ liệu được truy cập thường xuyên trong bộ nhớ, giảm thiểu các lượt truy cập qua lại với cơ sở dữ liệu.
+  - Bảo mật: ActiveRecord tích hợp với các tính năng bảo mật của Rails để bảo vệ dữ liệu khỏi truy cập trái phép và thao tác. Nó giúp ngăn chặn các cuộc tấn công SQL injection và các lỗ hổng bảo mật liên quan đến cơ sở dữ liệu khác.
+
+***2. Tại sao phải sử dụng  Ruby on Rails so với các ngôn ngữ lập trình khác?***
+   
 
 
 
