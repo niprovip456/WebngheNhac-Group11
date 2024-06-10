@@ -81,8 +81,8 @@ user.save  # Create
 user = User.find(1)  # Read
 user.update(email: "newemail@example.com")  # Update
 user.destroy  # Delete
-```
-- 
+
+
   - Validations: Active Record hỗ trợ các xác thực dữ liệu dễ dàng để đảm bảo tính nhất quán và hợp lệ của dữ liệu.
 ```sh
 class User < ApplicationRecord
