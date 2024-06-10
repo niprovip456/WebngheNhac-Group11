@@ -68,8 +68,8 @@ npm start
 
 ---
 # Seminar: Ruby on Rails 
-**1. Ruby hỗ trợ quản lý CSDL như thế nào?**
-- Ruby hỗ trợ quản lý cơ sở dữ liệu (CSDL) thông qua nhiều thư viện và công cụ, nhưng nổi bật nhất là Active Record, một phần của framework Ruby on Rails. Dưới đây là cách Ruby, đặc biệt là Ruby on Rails, hỗ trợ quản lý CSDL
+***1. Ruby hỗ trợ quản lý CSDL như thế nào?***
+- Ruby hỗ trợ quản lý cơ sở dữ liệu (CSDL) thông qua nhiều thư viện và công cụ, nhưng nổi bật nhất là Active Record, một phần của framework Ruby on Rails. Dưới đây là cách Ruby, đặc biệt là Ruby on Rails, hỗ trợ quản lý CSDL:
 - **1.Active Record**
   - Active Record là một ORM (Object-Relational Mapping) được tích hợp sẵn trong Ruby on Rails. Nó cung cấp một cách tiếp cận thân thiện với lập trình viên để làm việc với cơ sở dữ liệu. Một số tính năng và lợi ích chính có thể kể đến của Active Record như:
   - Mapping Objects to Tables: Active Record tự động ánh xạ các lớp Ruby vào các bảng trong cơ sở dữ liệu. Ví dụ, một lớp User trong Ruby sẽ tương ứng với bảng users trong CSDL.
@@ -82,14 +82,14 @@ user = User.find(1)  # Read
 user.update(email: "newemail@example.com")  # Update
 user.destroy  # Delete
 ```
-    - Validations: Active Record hỗ trợ các xác thực dữ liệu dễ dàng để đảm bảo tính nhất quán và hợp lệ của dữ liệu.
+  - Validations: Active Record hỗ trợ các xác thực dữ liệu dễ dàng để đảm bảo tính nhất quán và hợp lệ của dữ liệu.
 ```sh
 class User < ApplicationRecord
   validates :name, presence: true
   validates :email, uniqueness: true
 end
 ```
-    - Associations: Active Record cung cấp các phương thức để thiết lập mối quan hệ giữa các bảng như belongs_to, has_many, has_one, has_and_belongs_to_many.
+  - Associations: Active Record cung cấp các phương thức để thiết lập mối quan hệ giữa các bảng như belongs_to, has_many, has_one, has_and_belongs_to_many.
 ```sh
 class User < ApplicationRecord
   has_many :posts
