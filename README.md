@@ -70,7 +70,7 @@ npm start
 # Seminar: Ruby on Rails 
 **1. Ruby hỗ trợ quản lý CSDL như thế nào?**
 - Ruby hỗ trợ quản lý cơ sở dữ liệu (CSDL) thông qua nhiều thư viện và công cụ, nhưng nổi bật nhất là Active Record, một phần của framework Ruby on Rails. Dưới đây là cách Ruby, đặc biệt là Ruby on Rails, hỗ trợ quản lý CSDL
-**1.Active Record**
+- **1.Active Record**
   - Active Record là một ORM (Object-Relational Mapping) được tích hợp sẵn trong Ruby on Rails. Nó cung cấp một cách tiếp cận thân thiện với lập trình viên để làm việc với cơ sở dữ liệu. Một số tính năng và lợi ích chính có thể kể đến của Active Record như:
   - Mapping Objects to Tables: Active Record tự động ánh xạ các lớp Ruby vào các bảng trong cơ sở dữ liệu. Ví dụ, một lớp User trong Ruby sẽ tương ứng với bảng users trong CSDL.
   - CRUD Operations: Active Record cung cấp các phương thức để thực hiện các thao tác CRUD (Create, Read, Update, Delete) một cách dễ dàng. Ví dụ:
@@ -102,35 +102,35 @@ end
 ```
 - **2. Migrations**
   - Migrations trong Rails cho phép quản lý các thay đổi trong cấu trúc cơ sở dữ liệu theo thời gian. Chúng cung cấp một cách để phiên bản hóa và áp dụng các thay đổi đối với CSDL.
--
+
   - Tạo Migrations: Tạo một migration bằng lệnh:
 ```sh
 rails generate migration AddEmailToUsers email:string
 ```
--
+
   - Chạy Migrations: Để áp dụng các thay đổi trong migration, chạy:
 ```sh
 rails db:migrate
 ```
--
+
   - Rollback Migrations: Quay lại migration trước đó nếu cần:
 ```sh
 rails db:rollback
 ```
 - **3. Query Interface**
   - Active Record cung cấp một query interface mạnh mẽ, cho phép truy vấn CSDL một cách dễ dàng và trực quan.
--
+
   - Basic Queries:
 ```sh
 users = User.where(active: true)
 user = User.find_by(email: "luong@example.com")
 ```
--
+
   - Advanced Queries:
 ```sh
 users = User.joins(:posts).where("posts.created_at > ?", 1.week.ago)
 ```
--
+
   - Scopes: Định nghĩa các scopes để tái sử dụng các truy vấn phức tạp.
 ```sh
 class User < ApplicationRecord
@@ -162,27 +162,27 @@ production:
 ```
 - **5. Database Tasks**
   - Rails cung cấp nhiều tác vụ (tasks) để quản lý cơ sở dữ liệu dễ dàng thông qua dòng lệnh:
--
+
   - Setup Database:
 ```sh
 rails db:setup
 ```
--
+
   - Create Database:
 ```sh
 rails db:create
 ```
--
+
   - Drop Database:
 ```sh
 rails db:drop
 ```
--
+
   - Migrate Database:
 ```sh
 rails db:migrate
 ```
--
+
   - Seed Database:
 ```sh
 rails db:seed
