@@ -70,7 +70,7 @@ npm start
 # Seminar: Ruby on Rails 
 ***1. Ruby hỗ trợ quản lý CSDL như thế nào?***
 - Ruby hỗ trợ quản lý cơ sở dữ liệu (CSDL) thông qua nhiều thư viện và công cụ, nhưng nổi bật nhất là Active Record, một phần của framework Ruby on Rails. Dưới đây là cách Ruby, đặc biệt là Ruby on Rails, hỗ trợ quản lý CSDL
-- 1.Active Record
+1.Active Record
   - Active Record là một ORM (Object-Relational Mapping) được tích hợp sẵn trong Ruby on Rails. Nó cung cấp một cách tiếp cận thân thiện với lập trình viên để làm việc với cơ sở dữ liệu. Một số tính năng và lợi ích chính có thể kể đến của Active Record như:
   - Mapping Objects to Tables: Active Record tự động ánh xạ các lớp Ruby vào các bảng trong cơ sở dữ liệu. Ví dụ, một lớp User trong Ruby sẽ tương ứng với bảng users trong CSDL.
   - CRUD Operations: Active Record cung cấp các phương thức để thực hiện các thao tác CRUD (Create, Read, Update, Delete) một cách dễ dàng. Ví dụ:
@@ -99,7 +99,7 @@ class Post < ApplicationRecord
   belongs_to :user
 end
 ```
-**b. Migrations**
+**22. Migrations**
 - Migrations trong Rails cho phép quản lý các thay đổi trong cấu trúc cơ sở dữ liệu theo thời gian. Chúng cung cấp một cách để phiên bản hóa và áp dụng các thay đổi đối với CSDL.
 
   - Tạo Migrations: Tạo một migration bằng lệnh:
@@ -114,7 +114,7 @@ rails db:migrate
 ```sh
 rails db:rollback
 ```
-**cc. Query Interface**
+**3. Query Interface**
 - Active Record cung cấp một query interface mạnh mẽ, cho phép truy vấn CSDL một cách dễ dàng và trực quan.
 
   - Basic Queries:
@@ -133,7 +133,7 @@ class User < ApplicationRecord
   scope :recent, -> { order(created_at: :desc) }
 end
 ```
-**d. Database Configuration**
+**4. Database Configuration**
 - Rails cung cấp một tệp cấu hình (config/database.yml) để thiết lập kết nối với nhiều loại CSDL như SQLite, MySQL, PostgreSQL, và nhiều loại khác.
 ```sh
 default: &default
@@ -155,7 +155,7 @@ production:
   username: myapp
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
 ```
-**e. Database Tasks**
+**5. Database Tasks**
 - Rails cung cấp nhiều tác vụ (tasks) để quản lý cơ sở dữ liệu dễ dàng thông qua dòng lệnh:
 
   - Setup Database:
